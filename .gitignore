@@ -1,0 +1,24 @@
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+
+# Terraform variable files that may contain secrets
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Logs
+*.log
+*trace*
+run-*-apply-log
+run-*-plan-log
+
+# macOS
+.DS_Store
+EOF
