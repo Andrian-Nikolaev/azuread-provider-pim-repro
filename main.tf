@@ -92,9 +92,7 @@ locals {
   }
 }
 
-# -------------------------------------------------------------------
 # Parent groups: 10 per provider alias
-# -------------------------------------------------------------------
 
 resource "azuread_group" "ddv_parent" {
   provider = azuread.ddv
@@ -120,9 +118,9 @@ resource "azuread_group" "rtl_parent" {
   ]
 }
 
-# -------------------------------------------------------------------
+
 # Persona groups: 10 batches x 3 personas x 2 aliases = 60 groups
-# -------------------------------------------------------------------
+
 
 resource "azuread_group" "ddv" {
   provider = azuread.ddv
@@ -148,9 +146,7 @@ resource "azuread_group" "rtl" {
   ]
 }
 
-# -------------------------------------------------------------------
 # Nested group memberships: 60 memberships
-# -------------------------------------------------------------------
 
 resource "azuread_group_member" "ddv_nested" {
   provider = azuread.ddv
